@@ -1,0 +1,44 @@
+{
+  "name": "appsbox",
+  "version": "1.0.0",
+  "author": {
+    "name": "SavandBros",
+    "email": "hello@savandbros.com",
+    "url": "https://www.savandbros.com"
+  },
+  "description": "Simplistic toolbox for your apps, links and commands.",
+  "homepage": "https://appsbox.savandbros.com",
+  "license": "GPL-3.0",
+  "copyright": "Copyright © 2022 SavandBros",
+  "main": "./dist/main.js",
+  "scripts": {
+    "compile": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint -c .eslintrc --ext .ts ./src",
+    "start": "electron ./dist/main.js",
+    "build": "electron-builder --config=build.json",
+    "build-windows": "electron-builder --config=build.json --win",
+    "build-linux": "electron-builder --config=build.json --linux",
+    "build-mac": "electron-builder --config=build.json --mac",
+    "compile-start": "npm run compile && npm run start",
+    "compile-build": "npm run compile && npm run build",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "devDependencies": {
+    "@types/duckduckgo-images-api": "^1.0.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/uuid4": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "electron": "^19.0.6",
+    "electron-builder": "^23.1.0",
+    "eslint": "^8.17.0",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "@octokit/rest": "^18.12.0",
+    "fs-extra": "^10.1.0",
+    "uuid4": "^2.0.2",
+    "duckduckgo-images-api": "^1.0.5"
+  }
+}

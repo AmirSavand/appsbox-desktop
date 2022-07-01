@@ -1,0 +1,32 @@
+{
+  "appId": "com.savandbros.appsbox",
+  "productName": "AppsBox",
+  "icon": "assets/icon.png",
+  "publish": null,
+  "directories": {
+    "output": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "assets/**/*",
+    "package.json"
+  ],
+  "mac": {
+    "category": "public.app-category.utilities"
+  },
+  "linux": {
+    "category": "Utilities",
+    "target": [
+      "deb",
+      "rpm",
+      "snap"
+    ]
+  },
+  "win": {
+    "icon": "assets/icon.ico",
+    "target": "NSIS"
+  },
+  "nsis": {
+    "artifactName": "${productName}-${version}.${ext}"
+  }
+}
